@@ -1,0 +1,137 @@
+:root {
+  --yellow: #eef13f;
+  --orange: #fe6638;
+  --green: #80b238;
+  --blue: #80c1d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--blue);
+  color: #fff;
+  font-family: Atma, sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h1 + p,
+button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 640px) {
+  .obstacles-group-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .prizes-group-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+nav {
+  background-color: var(--green);
+  opacity: 0.6;
+  padding: 0.1rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  list-style: none;
+}
+ul > li:nth-child(2n + 1):hover {
+  transform: rotate(12deg);
+}
+ul > li:nth-child(2n):hover {
+  transform: rotate(-12deg);
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 80vh;
+  background-image: url("img/blue-splash.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+header h1,
+p {
+  color: var(--orange);
+  text-shadow: white 1px 1px 1px;
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 0;
+}
+h2 {
+  text-align: center;
+}
+article {
+  padding: 2rem;
+}
+.obstacles {
+  background-color: var(--orange);
+  min-height: 60vh;
+}
+.obstacles-group-grid article {
+  border-radius: 25px;
+  background-color: var(--green);
+}
+.prizes {
+  background-color: var(--green);
+  min-height: 70vh;
+}
+.prizes-group-grid article {
+  border: 2px dashed var(--yellow);
+}
+label {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  background-color: var(--orange);
+  border-radius: 8px;
+  border: hidden;
+  padding: 1rem;
+}
+button {
+  background-color: var(--yellow);
+  border-radius: 8px;
+  border: hidden;
+  padding: 1rem;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: var(--green);
+}
+footer {
+  background-color: var(--yellow);
+  color: black;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
